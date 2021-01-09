@@ -1,0 +1,15 @@
+@import 'src/scss/variables/colors';
+
+#youtubeApp {
+    height: 100%;
+    width: 100%;
+    background-color: $palette-primary-background;
+}
+
+//.app {
+//    background-color: $palette-primary;
+//
+//    &__layout {
+//        background-color: $palette-primary;
+//    }
+//}

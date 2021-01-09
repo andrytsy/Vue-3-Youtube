@@ -1,13 +1,18 @@
 <template>
-    <router-view/>
+    <div class="app__layout">
+        <router-view/>
+    </div>
 </template>
 
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+    name: 'RootApp'
+})
+
+</script>
+
 <style lang="scss">
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-}
+    @import './scss/reset.scss';
+    @import './scss/app.scss';
 </style>

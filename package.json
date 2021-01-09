@@ -46,7 +46,15 @@
       "ecmaVersion": 2020
     },
     "rules": {
-      "indent": [1, 4, {"SwitchCase": 1}]
+      "indent": [
+        1,
+        4,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "@typescript-eslint/no-var-requires": 0,
+      "no-tabs": 0
     }
   },
   "browserslist": [
