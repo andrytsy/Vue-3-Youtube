@@ -45,7 +45,9 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {
+      "indent": [1, 4, {"SwitchCase": 1}]
+    }
   },
   "browserslist": [
     "> 1%",
