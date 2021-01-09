@@ -2,12 +2,14 @@
 	<div></div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
     name: 'AsideMenu'
-}
+})
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+	@import "./styles/app.scss";
 </style>

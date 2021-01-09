@@ -1,13 +1,17 @@
 <template>
-	<div></div>
+	<div class="header-app">
+
+	</div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
     name: 'Header'
-}
+})
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+	@import "./styles/app.scss";
 </style>
