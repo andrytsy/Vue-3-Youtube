@@ -1,9 +1,12 @@
 @import 'src/scss/variables/colors';
+@import 'src/scss/variables/fontSizes';
 
 #youtubeApp {
     height: 100%;
     width: 100%;
     background-color: $palette-primary-background;
+    color: $palette-primary-text;
+    font-size: $primary-font-size;
 }
 
 //.app {
