@@ -1,12 +1,16 @@
 <template>
-	<div></div>
+	<BurgerIcon />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import BurgerIcon from 'uiKit/Icons/BurgerIcon.vue'
 
 export default defineComponent({
-    name: 'MenuButton'
+    name: 'MenuButton',
+    components: {
+        BurgerIcon
+    }
 })
 </script>
 

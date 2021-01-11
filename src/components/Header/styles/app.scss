@@ -1,7 +1,25 @@
 @import "src/scss/variables/colors";
 
+$headerHeight: 56px;
+
 .header-app {
-    height: 56px;
+    height: $headerHeight;
     width: 100%;
     background-color: $palette-secondary-background;
+    display: flex;
+    justify-content: flex-start;
+
+    &__menu-btn {
+        width: $headerHeight;
+        height: 56px;
+        padding: 12px 14px;
+        cursor: pointer;
+    }
+
+    &__logo {
+        height: $headerHeight;
+        width: 90px;
+        padding: 19px 0;
+        cursor: pointer;
+    }
 }
