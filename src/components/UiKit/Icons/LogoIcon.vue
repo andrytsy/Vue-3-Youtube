@@ -16,7 +16,7 @@ import { defineComponent } from 'vue'
 import BaseIcon from '@/components/UiKit/Icons/IconBase.vue'
 
 export default defineComponent({
-    name: 'Logo',
+    name: 'LogoIcon',
     components: {
     	BaseIcon
     }

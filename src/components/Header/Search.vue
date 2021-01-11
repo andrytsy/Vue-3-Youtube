@@ -9,7 +9,3 @@ export default defineComponent({
     name: 'Search'
 })
 </script>
-
-<style scoped lang="scss">
-	@import "./styles/search.scss";
-</style>
