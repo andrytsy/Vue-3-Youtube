@@ -2,6 +2,17 @@
 
 .aside-menu {
     height: 100%;
-    width: 240px;
+    width: 56px;
+    transition: 0.2s;
     background-color: $palette-secondary-background;
+
+    &--open {
+        width: 240px;
+    }
+
+    &__header {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
