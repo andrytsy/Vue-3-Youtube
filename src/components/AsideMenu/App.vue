@@ -1,27 +1,45 @@
 <template>
-	<div :class="{'aside-menu--open': isMenuOpen}" class="aside-menu">
+	<div :class="asideMenuClasses" class="aside-menu">
+		<!-- todo: убрать есть не будет использоваться -->
 		<MainLogoBlock
 			v-if="isMenuOpen"
 			class="aside-menu__header"
 		/>
-		<MenuControls />
+		<MenuMainSections />
+		<MenuAccountSections />
+		<MenuSubscriptions v-if="true" />
+		<MenuBestSections v-else />
+		<MenuYoutubeMoreSections />
+		<MenuHelpSections />
 	</div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, computed, ComputedRef } from 'vue'
 import MainLogoBlock from '@/components/Header/MainLogoBlock/App.vue'
 import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
-import MenuControls from '@/components/AsideMenu/MenuControls/App.vue'
+import MenuMainSections from '@/components/AsideMenu/MenuMainSections/App.vue'
+import MenuAccountSections from '@/components/AsideMenu/MenuAccountSections/App.vue'
+import MenuSubscriptions from '@/components/AsideMenu/MenuSubscriptions/App.vue'
+import MenuBestSections from '@/components/AsideMenu/MenuBestSections/App.vue'
+import MenuYoutubeMoreSections from '@/components/AsideMenu/MenuYoutubeMoreSections/App.vue'
+import MenuHelpSections from '@/components/AsideMenu/MenuHelpSections/App.vue'
 
 export default defineComponent({
     name: 'AsideMenu',
     components: {
 	    MainLogoBlock,
-        MenuControls
+	    MenuMainSections,
+	    MenuAccountSections,
+	    MenuSubscriptions,
+	    MenuBestSections,
+	    MenuYoutubeMoreSections,
+	    MenuHelpSections
     },
     setup () {
-        return { isMenuOpen }
+    	const asideMenuClasses: ComputedRef = computed(() => ({ 'aside-menu--open': isMenuOpen }))
+
+        return { asideMenuClasses, isMenuOpen }
     }
 })
 </script>
