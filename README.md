@@ -25,4 +25,4 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 P.S.
-*"I'm gonna go build my own youtube... with blackjack and hookers! In fact, forget the youtube!"* - ***Bender***&copy;
+*"I'm gonna go build my own youtube... with blackjack and hookers! In fact, forget the youtube!"* - &copy;***Bender***
