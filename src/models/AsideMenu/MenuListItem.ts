@@ -1,15 +1,18 @@
 export default class MenuListItem {
 	readonly id: number
 	readonly title: string
-	readonly src: string
+	readonly icon: string
+	readonly path: string
 
 	constructor(
 		id: number,
 		title: string,
-		src: string
+		icon: string,
+		path: string
 	) {
 		this.id = id
 		this.title = title
-		this.src = src
+		this.icon = icon
+		this.path = path
 	}
 }
