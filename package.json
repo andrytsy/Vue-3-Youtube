@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "client": "vue-cli-service serve",
+    "server": "node server/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "vue": "^3.0.5",
     "vue-class-component": "^8.0.0-0",

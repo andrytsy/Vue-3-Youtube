@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import IconBase from 'app/components/UiKit/Icons/IconBase.vue'
+import IconBase from '@/components/UiKit/Icons/IconBase.vue'
 
 export default defineComponent({
     name: 'BurgerIcon',

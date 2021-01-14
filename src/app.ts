@@ -2,6 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-createApp(App)
+export default createApp(App)
     .use(router)
     .mount('#youtubeApp')

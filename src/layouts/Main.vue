@@ -9,10 +9,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Header from 'app/components/Header/App.vue'
-import AsideMenu from 'app/components/AsideMenu/App.vue'
-import MainContent from 'app/components/MainContent/App.vue'
-import Footer from 'app/components/Footer/App.vue'
+import Header from '@/components/Header/App.vue'
+import AsideMenu from '@/components/AsideMenu/App.vue'
+import MainContent from '@/components/MainContent/App.vue'
+import Footer from '@/components/Footer/App.vue'
 
 export default defineComponent({
     name: 'MainPage',

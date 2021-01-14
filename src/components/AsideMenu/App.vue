@@ -25,6 +25,8 @@ import MenuBestSections from '@/components/AsideMenu/MenuBestSections/App.vue'
 import MenuYoutubeMoreSections from '@/components/AsideMenu/MenuYoutubeMoreSections/App.vue'
 import MenuHelpSections from '@/components/AsideMenu/MenuHelpSections/App.vue'
 
+import { getMenuSection } from '@/api/getMenuSection.ts'
+
 export default defineComponent({
     name: 'AsideMenu',
     components: {
@@ -40,6 +42,9 @@ export default defineComponent({
     	const asideMenuClasses: ComputedRef = computed(() => ({ 'aside-menu--open': isMenuOpen }))
 
         return { asideMenuClasses, isMenuOpen }
+    },
+    mounted () {
+        getMenuSection()
     }
 })
 </script>
