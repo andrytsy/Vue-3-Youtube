@@ -1,11 +1,11 @@
 <template>
 	<div :class="asideMenuClasses" class="aside-menu">
-		<!-- todo: убрать есть не будет использоваться -->
+		<!-- todo: убрать если не будет использоваться -->
 		<MainLogoBlock
 			v-if="isMenuOpen"
 			class="aside-menu__header"
 		/>
-		<MenuMainSections />
+		<MenuMainSections :list="mainSections" />
 		<MenuAccountSections />
 		<MenuSubscriptions v-if="true" />
 		<MenuBestSections v-else />
@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ComputedRef } from 'vue'
+import { defineComponent, computed, ComputedRef, Ref, ref } from 'vue'
 import MainLogoBlock from '@/components/Header/MainLogoBlock/App.vue'
 import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
 import MenuMainSections from '@/components/AsideMenu/MenuMainSections/App.vue'
@@ -25,7 +25,7 @@ import MenuBestSections from '@/components/AsideMenu/MenuBestSections/App.vue'
 import MenuYoutubeMoreSections from '@/components/AsideMenu/MenuYoutubeMoreSections/App.vue'
 import MenuHelpSections from '@/components/AsideMenu/MenuHelpSections/App.vue'
 
-import { getMenuSection } from '@/api/getMenuSection.ts'
+import { fetchMenuSections } from '@/api/getMenuSection.ts'
 
 export default defineComponent({
     name: 'AsideMenu',
@@ -39,16 +39,20 @@ export default defineComponent({
 	    MenuHelpSections
     },
     setup () {
+    	const mainSections: Ref = ref([])
     	const asideMenuClasses: ComputedRef = computed(() => ({ 'aside-menu--open': isMenuOpen }))
+	    const updateMenuSections = async () => {
+		    mainSections.value = await fetchMenuSections()
+	    }
 
-        return { asideMenuClasses, isMenuOpen }
+        return { asideMenuClasses, isMenuOpen, mainSections, updateMenuSections }
     },
     mounted () {
-        getMenuSection()
+    	this.updateMenuSections()
     }
 })
 </script>
 
 <style scoped lang="scss">
-	@import "./styles/app.scss";
+	@import "./styles/asideMenu.scss";
 </style>

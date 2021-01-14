@@ -8,9 +8,9 @@ server.get('/', (req, res) => {
 
 server.get('/getMenuSections', (req, res) => {
     const mainSections = [
-        { id: 1, title: 'Home', path: '/' },
-        { id: 1, title: 'Trending', path: '/feed/trends' },
-        { id: 1, title: 'Subscriptions', path: '/feed/Subscriptions' }
+        { id: 1, title: 'Home', path: '/', icon: '' },
+        { id: 1, title: 'Trending', path: '/feed/trends', icon: '' },
+        { id: 1, title: 'Subscriptions', path: '/feed/Subscriptions', icon: '' }
     ]
 
     res.json(mainSections)

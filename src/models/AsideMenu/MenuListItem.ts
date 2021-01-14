@@ -1,3 +1,5 @@
+import IMenuListItem from 'app/interfaces/MenuListItem'
+
 export default class MenuListItem {
 	readonly id: number
 	readonly title: string
@@ -5,14 +7,11 @@ export default class MenuListItem {
 	readonly path: string
 
 	constructor (
-	    id: number,
-	    title: string,
-	    icon: string,
-	    path: string
+		data: IMenuListItem
 	) {
-	    this.id = id
-	    this.title = title
-	    this.icon = icon
-	    this.path = path
+	    this.id = data.id
+	    this.title = data.title
+	    this.icon = data.icon
+	    this.path = data.path
 	}
 }

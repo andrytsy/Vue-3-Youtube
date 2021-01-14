@@ -5,6 +5,7 @@
 			v-for="item in list"
 			:key="item.title"
 			:item="item"
+			class="menu-list__item"
 		/>
 	</div>
 </template>
@@ -30,3 +31,7 @@ export default defineComponent({
     }
 })
 </script>
+
+<style scoped lang="scss">
+	@import "./styles/menuListBase.scss";
+</style>
