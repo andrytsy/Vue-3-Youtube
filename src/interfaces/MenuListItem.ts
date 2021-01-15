@@ -1,6 +1,6 @@
-export default interface IMenuListItem {
-	id: number
-	title: string
-	icon: string
-	path: string
+export default interface MenuListItemInterface {
+	id: number;
+	title: string;
+	icon: string;
+	path: string;
 }
