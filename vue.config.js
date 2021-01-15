@@ -20,9 +20,8 @@ module.exports = {
 	    },
     	resolve: {
 		    alias: {
-			    public: path.resolve(__dirname, './public/'),
-			    uiKit: path.resolve(__dirname, './src/components/UiKit/'),
-			    app: path.resolve(__dirname, './src/')
+			    public: path.resolve(__dirname, './public'),
+			    uiKit: path.resolve(__dirname, './src/components/UiKit')
 		    },
             extensions: ['.js', '.ts', '.json', '.vue']
         }
