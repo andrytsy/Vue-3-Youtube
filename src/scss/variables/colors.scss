@@ -1,6 +1,8 @@
 // Локальные переменные
 $x-color-dark: hsl(0deg, 0%, 7%);
 $x-color-light-dark: hsl(0deg, 0%, 11%);
+$x-color-dark-gray: hsl(0deg, 0%, 24%);
+$x-color-dark-gray-2: hsl(0deg, 0%, 26%);
 $x-color-white: hsl(0deg, 0%, 100%);
 $x-color-gray: hsl(0deg, 0%, 100% / 50%);
 
@@ -36,5 +38,7 @@ $x-color-gray: hsl(0deg, 0%, 100% / 50%);
 // Глобальные переменные
 $palette-primary-background: $x-color-dark;
 $palette-secondary-background: $x-color-light-dark;
+$palette-third-background: $x-color-dark-gray;
+$palette-fourth-background: $x-color-dark-gray-2;
 $palette-primary-text: $x-color-white;
 $palette-secondary-text: $x-color-gray;

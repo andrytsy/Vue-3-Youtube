@@ -6,8 +6,8 @@
 			class="aside-menu__header"
 		/>
 		<MenuMainSections :list="mainSections" />
-		<MenuAccountSections />
-		<MenuSubscriptions v-if="true" />
+		<MenuAccountSections :list="mainSections" />
+		<MenuSubscriptions v-if="true" :list="mainSections" />
 		<MenuBestSections v-else />
 		<MenuYoutubeMoreSections />
 		<MenuHelpSections />
@@ -40,7 +40,7 @@ export default defineComponent({
     },
     setup () {
     	const mainSections: Ref = ref([])
-    	const asideMenuClasses: ComputedRef = computed(() => ({ 'aside-menu--open': isMenuOpen }))
+    	const asideMenuClasses: ComputedRef = computed(() => ({ 'aside-menu--open': isMenuOpen.value }))
 	    const updateMenuSections = async () => {
 		    mainSections.value = await fetchMenuSections()
 	    }

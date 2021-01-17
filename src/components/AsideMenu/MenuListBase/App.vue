@@ -5,7 +5,6 @@
 			v-for="item in list"
 			:key="item.title"
 			:item="item"
-			class="menu-list__item"
 		/>
 	</div>
 </template>
