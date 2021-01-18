@@ -1,7 +1,7 @@
 <template>
 	<div class="menu-list">
 		<div v-if="title" class="menu-list__title">{{ title }}</div>
-		<MenuListItem
+		<MenuSectionItem
 			v-for="item in list"
 			:key="item.title"
 			:item="item"
@@ -11,12 +11,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import MenuListItem from '@/components/AsideMenu/MenuListBase/MenuListItem.vue'
+import MenuSectionItem from '@/components/AsideMenu/MenuSectionBase/MenuSectionItem.vue'
 
 export default defineComponent({
-    name: 'MenuListBase',
+    name: 'MenuSectionBase',
     components: {
-        MenuListItem
+        MenuSectionItem
     },
     props: {
     	title: {
@@ -32,5 +32,5 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-	@import "./styles/menuListBase.scss";
+	@import "./styles/menuSectionBase.scss";
 </style>

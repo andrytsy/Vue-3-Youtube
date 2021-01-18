@@ -20,13 +20,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import MenuListItem from '@/models/AsideMenu/MenuListItem'
+import MenuSectionItem from '@/models/AsideMenu/MenuSectionItem'
 
 export default defineComponent({
-    name: 'MenuListItem',
+    name: 'MenuSectionItem',
     props: {
     	item: {
-    		type: MenuListItem,
+    		type: MenuSectionItem,
 		    required: true
 	    }
     }
@@ -34,5 +34,5 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@import "./styles/menuListItem.scss";
+@import "./styles/menuSectionItem.scss";
 </style>

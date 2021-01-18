@@ -1,12 +1,12 @@
-import MenuListItemInterface from '@/interfaces/MenuListItem'
+import MenuSectionItemInterface from '@/interfaces/MenuSectionItem'
 
-export default class MenuListItem {
+export default class MenuSectionItem {
 	readonly id: number
 	readonly title: string
 	readonly icon: string
 	readonly path: string
 
-	constructor (data: MenuListItemInterface) {
+	constructor (data: MenuSectionItemInterface) {
 	    this.id = data.id
 	    this.title = data.title
 	    this.icon = data.icon

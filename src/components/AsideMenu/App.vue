@@ -5,12 +5,12 @@
 			v-if="isMenuOpen"
 			class="aside-menu__header"
 		/>
-		<MenuMainSections :list="mainSections" />
-		<MenuAccountSections :list="mainSections" />
-		<MenuSubscriptions v-if="true" :list="mainSections" />
-		<MenuBestSections v-else />
-		<MenuYoutubeMoreSections />
-		<MenuHelpSections />
+		<MenuMainSection :list="mainSections" />
+		<MenuAccountSection :list="mainSections" />
+		<MenuSubscriptionsSection v-if="true" :list="mainSections" />
+		<MenuBestSection v-else />
+		<MenuYoutubeMoreSection />
+		<MenuHelpSection />
 	</div>
 </template>
 
@@ -18,12 +18,12 @@
 import { defineComponent, computed, ComputedRef, Ref, ref } from 'vue'
 import MainLogoBlock from '@/components/Header/MainLogoBlock/App.vue'
 import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
-import MenuMainSections from '@/components/AsideMenu/MenuMainSections/App.vue'
-import MenuAccountSections from '@/components/AsideMenu/MenuAccountSections/App.vue'
-import MenuSubscriptions from '@/components/AsideMenu/MenuSubscriptions/App.vue'
-import MenuBestSections from '@/components/AsideMenu/MenuBestSections/App.vue'
-import MenuYoutubeMoreSections from '@/components/AsideMenu/MenuYoutubeMoreSections/App.vue'
-import MenuHelpSections from '@/components/AsideMenu/MenuHelpSections/App.vue'
+import MenuMainSection from '@/components/AsideMenu/MenuMainSection/App.vue'
+import MenuAccountSection from '@/components/AsideMenu/MenuAccountSection/App.vue'
+import MenuSubscriptionsSection from '@/components/AsideMenu/MenuSubscriptionsSection/App.vue'
+import MenuBestSection from '@/components/AsideMenu/MenuBestSection/App.vue'
+import MenuYoutubeMoreSection from '@/components/AsideMenu/MenuYoutubeMoreSection/App.vue'
+import MenuHelpSection from '@/components/AsideMenu/MenuHelpSection/App.vue'
 
 import { fetchMenuSections } from '@/api/getMenuSection.ts'
 
@@ -31,12 +31,12 @@ export default defineComponent({
     name: 'AsideMenu',
     components: {
 	    MainLogoBlock,
-	    MenuMainSections,
-	    MenuAccountSections,
-	    MenuSubscriptions,
-	    MenuBestSections,
-	    MenuYoutubeMoreSections,
-	    MenuHelpSections
+	    MenuMainSection,
+	    MenuAccountSection,
+	    MenuSubscriptionsSection,
+	    MenuBestSection,
+	    MenuYoutubeMoreSection,
+	    MenuHelpSection
     },
     setup () {
     	const mainSections: Ref = ref([])

@@ -1,15 +1,15 @@
 <template>
-	<MenuListBase :list="list" />
+	<MenuSectionBase :list="list" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import MenuListBase from '@/components/AsideMenu/MenuListBase/App.vue'
+import MenuSectionBase from '@/components/AsideMenu/MenuSectionBase/App.vue'
 
 export default defineComponent({
-    name: 'MenuSubscriptions',
+    name: 'MenuAccountSection',
     components: {
-        MenuListBase
+        MenuSectionBase
     },
     props: {
         list: {
