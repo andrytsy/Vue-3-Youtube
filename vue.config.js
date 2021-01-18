@@ -10,7 +10,7 @@ module.exports = {
 				    changeOrigin: true,
 				    target: 'http://localhost:3000/',
 				    pathRewrite: {
-					    '^/api': ''
+					    '^/api': '/api/v1'
 				    }
 			    }
 		    },
@@ -20,6 +20,7 @@ module.exports = {
 	    },
     	resolve: {
 		    alias: {
+			    server: path.resolve(__dirname, './server'),
 			    public: path.resolve(__dirname, './public'),
 			    uiKit: path.resolve(__dirname, './src/components/UiKit')
 		    },

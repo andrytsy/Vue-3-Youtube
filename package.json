@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "client": "vue-cli-service serve",
-    "server": "node server/index.js",
+    "server": "node server/index.ts",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
