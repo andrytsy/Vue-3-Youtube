@@ -1,5 +1,6 @@
 
 class MenuSectionsController {
+	// @ts-ignore
 	static getMenuSections(req, res) {
 		const mainSections = [
 			{
@@ -7,7 +8,7 @@ class MenuSectionsController {
 				title: '',
 				items: [
 					{id: 'main-1', title: 'Home', path: '/', icon: 'home'},
-					{id: 'main-2', title: 'Trending', path: '/trends', icon: 'trending'},
+					{id: 'main-2', title: 'Trending', path: '/trending', icon: 'trending'},
 					{id: 'main-3', title: 'Subscriptions', path: '/subscriptions', icon: 'subscriptions'},
 					{id: 'main-4', title: 'YouTube Music', path: '/music', icon: 'y-music'}
 				]

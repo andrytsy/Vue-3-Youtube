@@ -1,11 +1,23 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Main from '../layouts/Main.vue'
+import Home from '@/pages/Home.vue'
+import Trending from '@/pages/Trending.vue'
+import Subscriptions from '@/pages/Subscriptions.vue'
 
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
-        name: 'Main',
-        component: Main
+        name: 'Home',
+        component: Home
+    },
+    {
+        path: '/trending',
+        name: 'Trending',
+        component: Trending
+    },
+    {
+        path: '/subscriptions',
+        name: 'Subscriptions',
+        component: Subscriptions
     }
 ]
 
