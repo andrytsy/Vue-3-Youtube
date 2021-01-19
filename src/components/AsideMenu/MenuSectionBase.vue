@@ -1,6 +1,6 @@
 <template>
 	<div class="menu-list">
-		<div v-if="section.title" class="menu-list__title">{{ section.title }}</div>
+		<div v-if="section.title && isMenuOpen" class="menu-list__title">{{ section.title }}</div>
 		<MenuSectionItem
 			v-for="item in section.items"
 			:key="item.title"
@@ -13,6 +13,7 @@
 import { defineComponent } from 'vue'
 import MenuSectionItem from '@/components/AsideMenu/MenuSectionItem.vue'
 import MenuSection from '@/models/AsideMenu/MenuSection.ts'
+import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
 
 export default defineComponent({
     name: 'MenuSectionBase',
@@ -24,6 +25,9 @@ export default defineComponent({
     		type: MenuSection,
             required: true
         }
+    },
+    setup () {
+    	return { isMenuOpen }
     }
 })
 </script>

@@ -12,7 +12,7 @@
 				</g>
 			</svg>
 		</div>
-		<div class="menu-list-item__title">
+		<div v-if="isMenuOpen" class="menu-list-item__title">
 			{{ item.title }}
 		</div>
 	</a>
@@ -21,6 +21,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import MenuSectionItem from '@/models/AsideMenu/MenuSectionItem'
+import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
 
 export default defineComponent({
     name: 'MenuSectionItem',
@@ -29,6 +30,9 @@ export default defineComponent({
     		type: MenuSectionItem,
 		    required: true
 	    }
+    },
+    setup () {
+    	return { isMenuOpen }
     }
 })
 </script>
