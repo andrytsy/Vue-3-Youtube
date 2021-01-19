@@ -5,7 +5,7 @@ class MenuSectionsController {
 			{
 				id: 'main',
 				title: '',
-				sections: [
+				items: [
 					{id: 'main-1', title: 'Home', path: '/', icon: 'home'},
 					{id: 'main-2', title: 'Trending', path: '/trends', icon: 'trending'},
 					{id: 'main-3', title: 'Subscriptions', path: '/subscriptions', icon: 'subscriptions'},
@@ -15,7 +15,7 @@ class MenuSectionsController {
 			{
 				id: 'account',
 				title: '',
-				sections: [
+				items: [
 					{ id: 'account-1', title: 'Library', path: '/library', icon: 'library' },
 					{ id: 'account-2', title: 'History', path: '/history', icon: 'history' },
 					{ id: 'account-3', title: 'Your videos', path: '/videos', icon: 'video' },
@@ -26,7 +26,7 @@ class MenuSectionsController {
 			{
 				id: 'best',
 				title: 'Best of YouTube',
-				sections: [
+				items: [
 					{id: 'best-1', title: 'Music', path: '/music', icon: 'y-music'},
 					{id: 'best-2', title: 'Gaming', path: '/gaming', icon: 'gaming'},
 					{id: 'best-3', title: 'News', path: '/news', icon: 'news'},
@@ -37,12 +37,12 @@ class MenuSectionsController {
 			{
 				id: 'subscriptions',
 				title: 'Subscriptions',
-				sections: []
+				items: []
 			},
 			{
 				id: 'more',
 				title: 'More From YouTube',
-				sections: [
+				items: [
 					{id: 'more-1', title: 'YouTube Premium', path: '/premium', icon: 'youtube'},
 					{id: 'more-2', title: 'Gaming', path: '/gaming', icon: 'gaming'},
 					{id: 'more-3', title: 'Live', path: '/live', icon: 'live'}
@@ -51,7 +51,7 @@ class MenuSectionsController {
 			{
 				id: 'help',
 				title: '',
-				sections: [
+				items: [
 					{id: 'help-1', title: 'Settings', path: '/settings', icon: 'settings'},
 					{id: 'help-2', title: 'Report history', path: '/settings', icon: 'settings'}
 				]

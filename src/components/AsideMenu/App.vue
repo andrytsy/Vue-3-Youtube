@@ -5,47 +5,35 @@
 			v-if="isMenuOpen"
 			class="aside-menu__header"
 		/>
-		<MenuMainSection :list="mainSections" />
-		<MenuAccountSection :list="mainSections" />
-		<MenuSubscriptionsSection v-if="true" :list="mainSections" />
-		<MenuBestSection v-else />
-		<MenuYoutubeMoreSection />
-		<MenuHelpSection />
+		<MenuSectionBase
+			v-for="section in allSections"
+			:key="section.id"
+			:section="section"
+		/>
 	</div>
 </template>
 
 <script lang="ts">
 import { defineComponent, computed, ComputedRef, Ref, ref } from 'vue'
 import MainLogoBlock from '@/components/Header/MainLogoBlock/App.vue'
+import MenuSectionBase from '@/components/AsideMenu/MenuSectionBase.vue'
 import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
-import MenuMainSection from '@/components/AsideMenu/MenuMainSection/App.vue'
-import MenuAccountSection from '@/components/AsideMenu/MenuAccountSection/App.vue'
-import MenuSubscriptionsSection from '@/components/AsideMenu/MenuSubscriptionsSection/App.vue'
-import MenuBestSection from '@/components/AsideMenu/MenuBestSection/App.vue'
-import MenuYoutubeMoreSection from '@/components/AsideMenu/MenuYoutubeMoreSection/App.vue'
-import MenuHelpSection from '@/components/AsideMenu/MenuHelpSection/App.vue'
-
 import { fetchMenuSections } from '@/api/getMenuSection.ts'
 
 export default defineComponent({
     name: 'AsideMenu',
     components: {
 	    MainLogoBlock,
-	    MenuMainSection,
-	    MenuAccountSection,
-	    MenuSubscriptionsSection,
-	    MenuBestSection,
-	    MenuYoutubeMoreSection,
-	    MenuHelpSection
+	    MenuSectionBase
     },
     setup () {
-    	const mainSections: Ref = ref([])
+    	const allSections: Ref = ref([])
     	const asideMenuClasses: ComputedRef = computed(() => ({ 'aside-menu--open': isMenuOpen.value }))
 	    const updateMenuSections = async () => {
-		    mainSections.value = await fetchMenuSections()
+		    allSections.value = await fetchMenuSections()
 	    }
 
-        return { asideMenuClasses, isMenuOpen, mainSections, updateMenuSections }
+        return { asideMenuClasses, isMenuOpen, allSections, updateMenuSections }
     },
     mounted () {
     	this.updateMenuSections()

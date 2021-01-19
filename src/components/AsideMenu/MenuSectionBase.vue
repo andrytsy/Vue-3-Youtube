@@ -1,8 +1,8 @@
 <template>
 	<div class="menu-list">
-		<div v-if="title" class="menu-list__title">{{ title }}</div>
+		<div v-if="section.title" class="menu-list__title">{{ section.title }}</div>
 		<MenuSectionItem
-			v-for="item in list"
+			v-for="item in section.items"
 			:key="item.title"
 			:item="item"
 		/>
@@ -11,7 +11,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import MenuSectionItem from '@/components/AsideMenu/MenuSectionBase/MenuSectionItem.vue'
+import MenuSectionItem from '@/components/AsideMenu/MenuSectionItem.vue'
+import MenuSection from '@/models/AsideMenu/MenuSection.ts'
 
 export default defineComponent({
     name: 'MenuSectionBase',
@@ -19,12 +20,8 @@ export default defineComponent({
         MenuSectionItem
     },
     props: {
-    	title: {
-    		type: String,
-		    required: false
-	    },
-        list: {
-    		type: Array,
+	    section: {
+    		type: MenuSection,
             required: true
         }
     }
