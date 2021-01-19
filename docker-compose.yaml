@@ -1,0 +1,26 @@
+version: '3'
+services:
+  app:
+    container_name: node-web-app
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+      - /app/node_modules # Remove this if you have pure JS dependencies
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27018:27017"
+  adminmongo:
+    image: mrvautin/adminmongo
+    ports:
+      - 1234:1234
+    environment:
+      - HOST=0.0.0.0
