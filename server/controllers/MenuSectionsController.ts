@@ -44,7 +44,7 @@ class MenuSectionsController {
 				id: 'more',
 				title: 'More From YouTube',
 				items: [
-					{id: 'more-1', title: 'YouTube Premium', path: '/premium', icon: 'youtube'},
+					{id: 'more-1', title: 'YouTube Premium', path: '/premium', icon: 'premium'},
 					{id: 'more-2', title: 'Gaming', path: '/gaming', icon: 'gaming'},
 					{id: 'more-3', title: 'Live', path: '/live', icon: 'live'}
 				]
@@ -54,7 +54,8 @@ class MenuSectionsController {
 				title: '',
 				items: [
 					{id: 'help-1', title: 'Settings', path: '/settings', icon: 'settings'},
-					{id: 'help-2', title: 'Report history', path: '/settings', icon: 'settings'}
+					{id: 'help-2', title: 'Report history', path: '/reports', icon: 'flag'},
+					{id: 'help-3', title: 'Send feedback', path: '/feedback', icon: 'feedback'}
 				]
 			}
 		]
