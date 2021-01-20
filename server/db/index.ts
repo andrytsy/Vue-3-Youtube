@@ -13,6 +13,16 @@ const Values = mongoose.model('values', schema);
 // 		});
 // });
 
+// mongoose.connect('mongodb://mongo:27017/web-app-db', (err) => {
+// 	if (err) {
+// 		console.error('Error occurred while connecting to DB!')
+// 		throw err
+// 	} else {
+// 		console.log('Database connection established successfully')
+// 	}
+// })
+
+
 class DataBase {
 	static connectDB() {
 		mongoose.connect(process.env.MONGODB_ADDON_URI, { useNewUrlParser: true });

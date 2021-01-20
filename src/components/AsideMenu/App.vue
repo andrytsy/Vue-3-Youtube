@@ -1,44 +1,44 @@
 <template>
-	<div :class="asideMenuClasses" class="aside-menu">
-		<!-- todo: убрать если не будет использоваться -->
-		<MainLogoBlock
-			v-if="isMenuOpen"
-			class="aside-menu__header"
-		/>
-		<MenuSectionBase
-			v-for="section in allSections"
-			:key="section.id"
-			:section="section"
-		/>
-	</div>
+    <div :class="asideMenuClasses" class="aside-menu">
+        <!-- todo: убрать если не будет использоваться -->
+        <MainLogoBlock
+            v-if="isMenuOpen"
+            class="aside-menu__header"
+        />
+        <MenuSectionBase
+            v-for="section in allSections"
+            :key="section.id"
+            :section="section"
+        />
+    </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ComputedRef, Ref, ref } from 'vue'
-import MainLogoBlock from '@/components/Header/MainLogoBlock/App.vue'
-import MenuSectionBase from '@/components/AsideMenu/MenuSectionBase.vue'
-import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
-import { fetchMenuSections } from '@/api/getMenuSection.ts'
+    import { defineComponent, computed, ComputedRef, Ref, ref } from 'vue'
+    import MainLogoBlock from '@/components/Header/MainLogoBlock/App.vue'
+    import MenuSectionBase from '@/components/AsideMenu/MenuSectionBase.vue'
+    import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
+    import { fetchMenuSections } from '@/api/getMenuSection.ts'
 
-export default defineComponent({
-    name: 'AsideMenu',
-    components: {
-	    MainLogoBlock,
-	    MenuSectionBase
-    },
-    setup () {
-    	const allSections: Ref = ref([])
-    	const asideMenuClasses: ComputedRef = computed(() => ({ 'aside-menu--open': isMenuOpen.value }))
-	    const updateMenuSections = async () => {
-		    allSections.value = await fetchMenuSections()
-	    }
+    export default defineComponent({
+        name: 'AsideMenu',
+        components: {
+            MainLogoBlock,
+            MenuSectionBase
+        },
+        setup () {
+            const allSections: Ref = ref([])
+            const asideMenuClasses: ComputedRef = computed(() => ({ 'aside-menu--open': isMenuOpen.value }))
+            const updateMenuSections = async () => {
+                allSections.value = await fetchMenuSections()
+            }
 
-        return { asideMenuClasses, isMenuOpen, allSections, updateMenuSections }
-    },
-    mounted () {
-    	this.updateMenuSections()
-    }
-})
+            return { asideMenuClasses, isMenuOpen, allSections, updateMenuSections }
+        },
+        mounted () {
+            this.updateMenuSections()
+        }
+    })
 </script>
 
 <style scoped lang="scss">

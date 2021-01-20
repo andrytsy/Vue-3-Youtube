@@ -13,8 +13,21 @@ module.exports = {
     },
     rules: {
         indent: ['error', 4, { SwitchCase: 1 }],
-        '@typescript-eslint/no-var-requires': 0,
-        'no-mixed-spaces-and-tabs': 0,
-        'no-tabs': 0
-    }
+	    'vue/html-indent': ['error', 4],
+	    'vue/script-indent': ['error', 4, {
+		    baseIndent: 1,
+		    switchCase: 1
+	    }],
+	    '@typescript-eslint/no-var-requires': 0,
+	    'no-mixed-spaces-and-tabs': 0,
+	    'no-tabs': 0
+    },
+    overrides: [
+        {
+            files: ['*.vue'],
+            rules: {
+                indent: 'off'
+            }
+        }
+    ]
 }
