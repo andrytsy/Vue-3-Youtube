@@ -2,7 +2,7 @@
     <Header />
     <div class="main__content">
         <AsideMenu />
-        <MainContent />
+        <slot name="content"></slot>
     </div>
     <Footer />
 </template>
@@ -11,7 +11,6 @@
     import { defineComponent } from 'vue'
     import Header from '@/components/Header/App.vue'
     import AsideMenu from '@/components/AsideMenu/App.vue'
-    import MainContent from '@/components/MainContent/App.vue'
     import Footer from '@/components/Footer/App.vue'
 
     export default defineComponent({
@@ -19,7 +18,6 @@
         components: {
             Header,
             AsideMenu,
-            MainContent,
             Footer
         }
     })

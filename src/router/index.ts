@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '@/pages/Home.vue'
+import Watch from '@/pages/Watch.vue'
 import Trending from '@/pages/Trending.vue'
 import Subscriptions from '@/pages/Subscriptions.vue'
 
@@ -8,6 +9,11 @@ const routes: Array<RouteRecordRaw> = [
         path: '/',
         name: 'Home',
         component: Home
+    },
+    {
+        path: '/watch/:id',
+        name: 'Watch',
+        component: Watch
     },
     {
         path: '/trending',

@@ -1,0 +1,8 @@
+.content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: calc(100% - 240px);
+    max-height: calc(100% - 56px);
+    overflow: scroll;
+}
