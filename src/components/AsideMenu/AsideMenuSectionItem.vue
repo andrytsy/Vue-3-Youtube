@@ -2,7 +2,7 @@
     <a :href="item.path" class="menu-list-item">
         <div class="menu-list-item__icon">
             <svg class="menu-list-item__svg">
-                <use :xlink:href="`${icons}#${item.icon}`"></use>
+                <use :xlink:href="`${iconsSpriteSrc}#${item.icon}`"></use>
             </svg>
         </div>
         <div v-if="isMenuOpen" class="menu-list-item__title">
@@ -14,7 +14,7 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
     import AsideMenuSectionItem from '@/models/AsideMenu/AsideMenuSectionItem.ts'
-    import icons from '@/assets/icons.svg'
+    import iconsSpriteSrc from '@/assets/icons/asideMenuSprite.svg'
     import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
 
     export default defineComponent({
@@ -26,7 +26,7 @@
             }
         },
         setup () {
-            return { isMenuOpen, icons }
+            return { isMenuOpen, iconsSpriteSrc }
         }
     })
 </script>

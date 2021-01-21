@@ -1,4 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <symbol id="burger" viewBox="-4 0 24 24">
+        <g>
+            <rect y="8" width="16" height="1.6"></rect>
+            <rect y="12" width="16" height="1.6"></rect>
+            <rect y="16" width="16" height="1.6"></rect>
+        </g>
+    </symbol>
     <symbol id="home" viewBox="0 0 24 24">
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8"></path>
     </symbol>
