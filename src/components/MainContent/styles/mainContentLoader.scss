@@ -1,0 +1,37 @@
+@import "src/scss/variables/colors";
+@import "src/scss/mixins/contentLoader";
+
+.content-loader {
+    @include contentLoaderAnimation;
+
+    &-bar {
+        padding: 5px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $palette-secondary-background;
+
+        &__item {
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $palette-fourth-background;
+        }
+    }
+
+    &-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: calc(100% - 240px);
+        max-height: calc(100% - 56px);
+
+        &__item {
+            width: 300px;
+            height: 200px;
+            padding: 10px 5px;
+            background-color: $palette-secondary-background;
+        }
+    }
+}
