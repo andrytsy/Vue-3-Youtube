@@ -2,6 +2,9 @@
 @import "src/scss/mixins/contentLoader";
 
 .content-loader {
+    max-width: calc(100% - 240px);
+    max-height: calc(100% - 56px);
+
     &-bar {
         padding: 5px;
         height: 56px;
@@ -9,11 +12,13 @@
         align-items: center;
         justify-content: space-around;
         background-color: $palette-secondary-background;
+        border-top: 1px solid $palette-fourth-background;
+        border-bottom: 1px solid $palette-fourth-background;
 
         &__item {
             @include contentLoaderAnimation;
-            width: 120px;
-            height: 40px;
+            width: 100px;
+            height: 30px;
             border-radius: 20px;
             background-color: $palette-fourth-background;
         }
@@ -22,15 +27,13 @@
     &-grid {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-        max-width: calc(100% - 240px);
-        max-height: calc(100% - 56px);
+        justify-content: center;
 
         &__item {
             @include contentLoaderAnimation;
-            width: 300px;
-            height: 200px;
-            padding: 10px 5px;
+            width: 360px;
+            height: 312px;
+            margin: 20px 10px;
             background-color: $palette-secondary-background;
         }
     }

@@ -1,11 +1,11 @@
 @mixin contentLoaderAnimation {
-    animation-name: example;
+    animation-name: loaderAnimation;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
 @keyframes loaderAnimation {
     0% {opacity: 1}
-    50% {opacity: 0.5}
+    60% {opacity: 0.6}
     100% {opacity: 1}
 }

@@ -1,5 +1,5 @@
 <template>
-    <template v-if="true">
+    <template v-if="false">
         <MainContentTagsBar />
         <MainContentGrid />
     </template>
