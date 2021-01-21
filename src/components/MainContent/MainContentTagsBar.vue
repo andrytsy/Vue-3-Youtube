@@ -6,6 +6,10 @@
     import { defineComponent } from 'vue'
 
     export default defineComponent({
-        name: 'Search'
+        name: 'MainContentTagsBar'
     })
 </script>
+
+<style scoped lang="scss">
+	@import "./styles/app.scss";
+</style>

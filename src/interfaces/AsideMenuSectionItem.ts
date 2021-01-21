@@ -1,4 +1,4 @@
-export default interface MenuSectionItemInterface {
+export default interface AsideMenuSectionItemInterface {
 	id: number;
 	title: string;
 	icon: string;

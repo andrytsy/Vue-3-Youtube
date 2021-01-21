@@ -1,20 +1,18 @@
 <template>
-    <ContentTagsBar />
-    <div class="content-grid">
-        <ContentItem v-for="n in 30" :key="n" />
-    </div>
+    <MainContentTagsBar />
+    <MainContentGrid />
 </template>
 
 <script lang="ts">
     import { defineComponent } from 'vue'
-    import ContentTagsBar from '@/components/MainContent/ContentTagsBar.vue'
-    import ContentItem from '@/components/MainContent/ContentItem.vue'
+    import MainContentTagsBar from '@/components/MainContent/MainContentTagsBar.vue'
+    import MainContentGrid from '@/components/MainContent/MainContentGrid.vue'
 
     export default defineComponent({
         name: 'MainContent',
         components: {
-            ContentTagsBar,
-            ContentItem
+            MainContentTagsBar,
+            MainContentGrid
         }
     })
 </script>

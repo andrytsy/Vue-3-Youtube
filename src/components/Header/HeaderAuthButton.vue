@@ -6,10 +6,6 @@
     import { defineComponent } from 'vue'
 
     export default defineComponent({
-        name: 'ContentTagsBar'
+        name: 'HeaderAuthButton'
     })
 </script>
-
-<style scoped lang="scss">
-	@import "./styles/app.scss";
-</style>

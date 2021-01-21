@@ -5,7 +5,7 @@
             v-if="isMenuOpen"
             class="aside-menu__header"
         />
-        <MenuSectionBase
+        <AsideMenuSection
             v-for="section in allSections"
             :key="section.id"
             :section="section"
@@ -16,7 +16,7 @@
 <script lang="ts">
     import { defineComponent, computed, ComputedRef, Ref, ref } from 'vue'
     import MainLogoBlock from '@/components/Header/MainLogoBlock/App.vue'
-    import MenuSectionBase from '@/components/AsideMenu/MenuSectionBase.vue'
+    import AsideMenuSection from '@/components/AsideMenu/AsideMenuSection.vue'
     import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
     import { fetchMenuSections } from '@/api/getMenuSection.ts'
 
@@ -24,7 +24,7 @@
         name: 'AsideMenu',
         components: {
             MainLogoBlock,
-            MenuSectionBase
+            AsideMenuSection
         },
         setup () {
             const allSections: Ref = ref([])

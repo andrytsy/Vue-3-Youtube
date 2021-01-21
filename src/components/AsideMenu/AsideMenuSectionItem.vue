@@ -13,15 +13,15 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue'
-    import MenuSectionItem from '@/models/AsideMenu/MenuSectionItem.ts'
+    import AsideMenuSectionItem from '@/models/AsideMenu/AsideMenuSectionItem.ts'
     import icons from '@/assets/icons.svg'
     import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
 
     export default defineComponent({
-        name: 'MenuSectionItem',
+        name: 'AsideMenuSectionItem',
         props: {
             item: {
-                type: MenuSectionItem,
+                type: AsideMenuSectionItem,
                 required: true
             }
         },
@@ -32,5 +32,5 @@
 </script>
 
 <style scoped lang="scss">
-@import "./styles/menuSectionItem.scss";
+@import "./styles/AsideMenuSectionItem.scss";
 </style>

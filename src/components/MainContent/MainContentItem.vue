@@ -6,10 +6,10 @@
     import { defineComponent } from 'vue'
 
     export default defineComponent({
-        name: 'ContentItem'
+        name: 'MainContentItem'
     })
 </script>
 
 <style scoped lang="scss">
-	@import "./styles/contentItem.scss";
+	@import "./styles/mainContentItem.scss";
 </style>

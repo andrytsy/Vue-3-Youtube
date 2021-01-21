@@ -1,23 +1,23 @@
 import axios from 'axios'
-import MenuSectionItem from '@/models/AsideMenu/MenuSectionItem'
-import MenuSection from '@/models/AsideMenu/MenuSection'
-import MenuSectionInterface from '@/interfaces/MenuSection'
-import MenuSectionItemInterface from '@/interfaces/MenuSectionItem'
+import AsideMenuSectionItem from '@/models/AsideMenu/AsideMenuSectionItem'
+import AsideMenuSection from '@/models/AsideMenu/AsideMenuSection'
+import AsideMenuSectionInterface from '@/interfaces/AsideMenuSection'
+import AsideMenuSectionItemInterface from '@/interfaces/AsideMenuSectionItem'
 
-const parseSections = (section: MenuSectionInterface) => {
-    return new MenuSection({
+const parseSections = (section: AsideMenuSectionInterface) => {
+    return new AsideMenuSection({
         ...section,
-        items: section.items.map((sectionItem: MenuSectionItemInterface) => new MenuSectionItem(sectionItem))
+        items: section.items.map((sectionItem: AsideMenuSectionItemInterface) => new AsideMenuSectionItem(sectionItem))
     })
 }
 
 export const fetchMenuSections = async () => {
-    let sections: MenuSectionItem[] = []
+    let sections: AsideMenuSectionItem[] = []
 
     const { data, status } = await axios.get('/api/getMenuSections')
 
     if (status === 200 && data.length) {
-        sections = data.map((group: MenuSectionInterface) => parseSections(group))
+        sections = data.map((group: AsideMenuSectionInterface) => parseSections(group))
     }
 
     return sections
