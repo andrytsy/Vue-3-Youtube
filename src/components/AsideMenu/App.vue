@@ -15,9 +15,9 @@
 
 <script lang="ts">
     import { defineComponent, computed, ComputedRef, Ref, ref } from 'vue'
-    import MainLogoBlock from '@/components/Header/MainLogoBlock/App.vue'
+    import MainLogoBlock from '@/components/MainLogoBlock/App.vue'
     import AsideMenuSection from '@/components/AsideMenu/AsideMenuSection.vue'
-    import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
+    import { isMenuOpen } from '@/components/MainLogoBlock/composition'
     import { fetchMenuSections } from '@/api/getMenuSection.ts'
 
     export default defineComponent({

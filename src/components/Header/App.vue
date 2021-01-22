@@ -8,7 +8,7 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue'
-    import MainLogoBlock from '@/components/Header/MainLogoBlock/App.vue'
+    import MainLogoBlock from '@/components/MainLogoBlock/App.vue'
     import HeaderSearch from '@/components/Header/HeaderSearch.vue'
     import HeaderAuthButton from '@/components/Header/HeaderAuthButton.vue'
 

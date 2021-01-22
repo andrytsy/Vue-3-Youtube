@@ -15,7 +15,7 @@
     import { defineComponent } from 'vue'
     import AsideMenuSectionItem from '@/models/AsideMenu/AsideMenuSectionItem.ts'
     import iconsSpriteSrc from '@/assets/icons/asideMenuSprite.svg'
-    import { isMenuOpen } from '@/components/Header/MainLogoBlock/composition'
+    import { isMenuOpen } from '@/components/MainLogoBlock/composition'
 
     export default defineComponent({
         name: 'AsideMenuSectionItem',
