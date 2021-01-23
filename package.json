@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1",
+    "googleapis": "^67.0.0",
     "mongoose": "^5.11.12",
     "vue": "^3.0.5",
     "vue-class-component": "^8.0.0-0",
