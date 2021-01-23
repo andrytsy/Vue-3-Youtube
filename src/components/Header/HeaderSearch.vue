@@ -3,12 +3,14 @@
         <UiDropdown>
             <template name="trigger">
                 <div class="header-search">
-                    <input @input="updateFastVariants" v-model="searchString" class="header-search__input" type="text">
+                    <input @input="doSearch" v-model="searchString" class="header-search__input" type="text">
                     <button @click="doSearch" class="header-search__btn"></button>
                 </div>
             </template>
             <template name="content">
-                <UiSelect></UiSelect>
+                <ul>
+                    <li v-for="option in quickOptions" :key="option.title">{{ option.title }}</li>
+                </ul>
             </template>
         </UiDropdown>
     </div>
@@ -17,19 +19,21 @@
 <script lang="ts">
     import { defineComponent, Ref, ref } from 'vue'
     import UiDropdown from '@/components/UiKit/UiDropdown/App.vue'
-    import UiSelect from '@/components/UiKit/UiSelect/App.vue'
+    import { getSearchQuickOptions } from '@/api/getSearchQuickOptions.ts'
 
     export default defineComponent({
         name: 'HeaderSearch',
         components: {
-            UiDropdown,
-            UiSelect
+            UiDropdown
         },
         setup () {
             const searchString: Ref = ref('')
-            const updateFastVariants = () => ([])
-            const doSearch = () => ([])
-            return { updateFastVariants, searchString, doSearch }
+            const quickOptions: Ref = ref([])
+            const doSearch = () => {
+                getSearchQuickOptions(searchString.value)
+            }
+
+            return { searchString, quickOptions, doSearch }
         }
     })
 </script>
