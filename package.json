@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "yarn && yarn client && yarn server",
     "client": "vue-cli-service serve",
     "server": "node server/index.ts",
     "lint": "vue-cli-service lint",

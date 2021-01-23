@@ -1,9 +1,10 @@
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg"
-         :width="width"
-         :height="height"
-         :viewBox="viewBox"
-         role="presentation"
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        :width="width"
+        :height="height"
+        :viewBox="viewBox"
+        role="presentation"
     >
         <slot />
     </svg>

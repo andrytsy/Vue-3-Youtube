@@ -15,10 +15,6 @@
     export default defineComponent({
         name: 'UiDropdown',
         props: {
-            options: {
-                type: Array,
-                required: true
-            },
             positioning: {
                 type: String,
                 default: 'bottom'
@@ -38,3 +34,7 @@
         }
     })
 </script>
+
+<style scoped lang="scss">
+	@import "./styles/app.scss";
+</style>
