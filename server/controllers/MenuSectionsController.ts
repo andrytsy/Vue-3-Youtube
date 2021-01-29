@@ -1,7 +1,7 @@
+import { Request, Response } from 'express'
 
-class MenuSectionsController {
-	// @ts-ignore
-	static getMenuSections(req, res) {
+export default class MenuSectionsController {
+	static getMenuSections(req: Request, res: Response) {
 		const mainSections = [
 			{
 				id: 'main',
@@ -60,9 +60,6 @@ class MenuSectionsController {
 			}
 		]
 
-		// @ts-ignore
 		res.json(mainSections)
 	}
 }
-
-module.exports = MenuSectionsController

@@ -1,7 +1,8 @@
 import express from 'express'
+import QuickOptionsController from 'server/controllers/QuickOptionsController.ts'
+
 const router = express.Router()
-import QuickOptionsController from 'server/controllers/QuickOptionsController'
 
 router.get('/', QuickOptionsController.getQuickOptions)
 
-module.exports = router
+export default router

@@ -6,7 +6,6 @@
     "outDir": "./dist",
     "jsx": "preserve",
     "importHelpers": true,
-    "moduleResolution": "classic",
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,10 +17,11 @@
     ],
     "paths": {
       "@/*": ["src/*"],
-      "server": ["server/*"]
+      "server/*": ["server/*"],
+      "*.ts": ["*"]
     },
     "lib": [
-      "es2015",
+      "esnext",
       "dom",
       "dom.iterable",
       "scripthost"

@@ -1,7 +1,10 @@
 import express from 'express'
+import getMenuSections from './getMenuSections'
+import getSearchQuickOptions from './getSearchQuickOptions'
+
 const router = express.Router()
 
-router.use('/getMenuSections', require('./getMenuSections.ts'))
-router.use('/getSearchQuickOptions', require('./getSearchQuickOptions.ts'))
+router.use('/getMenuSections', getMenuSections)
+router.use('/getSearchQuickOptions', getSearchQuickOptions)
 
-module.exports = router
+export default router

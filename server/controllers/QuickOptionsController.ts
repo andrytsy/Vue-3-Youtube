@@ -1,6 +1,7 @@
+import { Request, Response } from 'express'
+
 export default class QuickOptionsController {
-	// @ts-ignore
-	static getQuickOptions(req, res) {
+	static getQuickOptions(req: Request, res: Response) {
 		const options = [
 			{title: 'sdfa'},
 			{title: '34ttqqadsgs'},

@@ -1,7 +1,8 @@
 import express from 'express'
+import AuthController from 'server/controllers/MenuSectionsController.ts'
+
 const router = express.Router()
-const AuthController = require('../../controllers/MenuSectionsController.ts')
 
 router.get('/', AuthController.getMenuSections)
 
-module.exports = router
+export default router
