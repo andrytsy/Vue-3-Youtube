@@ -3,6 +3,7 @@
     "target": "es6",
     "module": "commonjs",
     "strict": true,
+    "outDir": "./dist",
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
@@ -16,6 +17,7 @@
       "webpack-env"
     ],
     "paths": {
+      "*": ["*"],
       "@/*": ["src/*"],
       "server": ["server/*"]
     },
@@ -27,6 +29,8 @@
     ]
   },
   "include": [
+    "server/**/*.ts",
+    "server/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
