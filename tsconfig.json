@@ -6,7 +6,7 @@
     "outDir": "./dist",
     "jsx": "preserve",
     "importHelpers": true,
-    "moduleResolution": "node",
+    "moduleResolution": "classic",
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,12 +17,11 @@
       "webpack-env"
     ],
     "paths": {
-      "*": ["*"],
       "@/*": ["src/*"],
       "server": ["server/*"]
     },
     "lib": [
-      "esnext",
+      "es2015",
       "dom",
       "dom.iterable",
       "scripthost"

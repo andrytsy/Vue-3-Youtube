@@ -1,4 +1,7 @@
-const notFoundError = async (req, res, next) => {
+import {Request, Response, NextFunction} from "express";
+
+// @ts-ignore
+const notFoundError = async (req: Request, res: Response, next: NextFunction) => {
 	const message = 'The url you trying to reach is not hosted on our server.'
 	const err = new Error('Not Found')
 

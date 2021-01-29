@@ -1,4 +1,4 @@
-class QuickOptionsController {
+export default class QuickOptionsController {
 	// @ts-ignore
 	static getQuickOptions(req, res) {
 		const options = [
@@ -10,5 +10,3 @@ class QuickOptionsController {
 		res.json(options)
 	}
 }
-
-module.exports = QuickOptionsController

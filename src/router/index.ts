@@ -4,7 +4,7 @@ import Watch from '@/pages/Watch.vue'
 import Trending from '@/pages/Trending.vue'
 import Subscriptions from '@/pages/Subscriptions.vue'
 
-const routes: Array<RouteRecordRaw> = [
+const routes: RouteRecordRaw[] = [
     {
         path: '/',
         name: 'Home',

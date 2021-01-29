@@ -1,5 +1,6 @@
-const router = require('express').Router()
-const QuickOptionsController = require('../../controllers/QuickOptionsController.ts')
+import express from 'express'
+const router = express.Router()
+import QuickOptionsController from 'server/controllers/QuickOptionsController'
 
 router.get('/', QuickOptionsController.getQuickOptions)
 
