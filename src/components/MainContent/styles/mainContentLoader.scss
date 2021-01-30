@@ -32,14 +32,20 @@
         &__item {
             @include contentLoaderAnimation;
             width: 360px;
-            height: 312px;
+            height: 340px;
             margin: 20px 10px;
-            background-color: $palette-secondary-background;
         }
     }
 }
 
 .grid-item {
+    &__image {
+        width: 100%;
+        height: 280px;
+        margin-bottom: 10px;
+        background-color: $palette-secondary-background;
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
@@ -48,8 +54,10 @@
     }
 
     &__icon {
-        width: 30px;
-        height: 30px;
+        align-self: center;
+        display: flex;
+        width: 40px;
+        height: 40px;
         border-radius: 30px;
         background-color: $palette-fourth-background;
     }
