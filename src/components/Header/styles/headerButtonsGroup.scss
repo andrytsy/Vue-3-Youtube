@@ -1,0 +1,20 @@
+@import "src/scss/variables/colors";
+
+.header-btn-group {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 56px;
+
+    &__item {
+        height: 30px;
+        width: 30px;
+        border-radius: 30px;
+        background-color: $palette-third-background;
+    }
+
+    &__add-video {}
+    &__g-services {}
+    &__notifications {}
+    &__auth {}
+}

@@ -2,7 +2,7 @@
     <div class="header-app">
         <MainLogoBlock />
         <HeaderSearch class="header-app__search" />
-        <HeaderAuthButton class="header-app__btn-group" />
+        <HeaderButtonsGroup class="header-app__btn-group" />
     </div>
 </template>
 
@@ -10,14 +10,14 @@
     import { defineComponent } from 'vue'
     import MainLogoBlock from '@/components/MainLogoBlock/App.vue'
     import HeaderSearch from '@/components/Header/HeaderSearch.vue'
-    import HeaderAuthButton from '@/components/Header/HeaderAuthButton.vue'
+    import HeaderButtonsGroup from '@/components/Header/HeaderButtonsGroup.vue'
 
     export default defineComponent({
         name: 'Header',
         components: {
             MainLogoBlock,
             HeaderSearch,
-            HeaderAuthButton
+            HeaderButtonsGroup
         }
     })
 </script>
