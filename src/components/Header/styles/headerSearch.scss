@@ -6,15 +6,6 @@
     justify-content: center;
     align-items: center;
 
-    &__input {
-        width: 400px;
-        height: 30px;
-        border: 1px solid $palette-primary-border;
-    }
-
-    &__bnt {
-        background-color: $palette-fourth-background;
-    }
 
     &__content {
         display: flex;
@@ -28,6 +19,31 @@
 
         &:hover {
             font-weight: bold;
+        }
+    }
+}
+
+.search-trigger {
+    display: flex;
+
+    &__input {
+        width: 500px;
+        height: 30px;
+        border: 1px solid $palette-fourth-background;
+
+        &:focus {
+            border: 1px solid $palette-primary-border;
+        }
+    }
+
+    &__btn {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-color: $palette-fourth-background;
+
+        &:hover {
+            background-color: $palette-primary-border;
         }
     }
 }

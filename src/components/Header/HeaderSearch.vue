@@ -1,13 +1,13 @@
 <template>
     <div class="header-search">
         <UiDropdown>
-            <template name="trigger">
-                <div class="header-search">
-                    <input @input="doSearch" v-model="searchString" class="header-search__input" type="text">
-                    <button @click="doSearch" class="header-search__btn"></button>
+            <template v-slot:trigger>
+                <div class="header-search__trigger search-trigger">
+                    <input @input="doSearch" v-model="searchString" class="search-trigger__input" type="text">
+                    <button @click="doSearch" class="search-trigger__btn"></button>
                 </div>
             </template>
-            <template name="content">
+            <template v-slot:content>
                 <ul class="header-search__content">
                     <li v-for="option in quickOptions" :key="option.title">{{ option.title }}</li>
                 </ul>

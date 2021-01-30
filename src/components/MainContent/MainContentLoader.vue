@@ -4,7 +4,7 @@
             <div v-for="n in 15" :key="`content-loader-bar-item-${n}}`" class="content-loader-bar__item"></div>
         </div>
         <div class="content-loader-grid">
-            <div v-for="n in 8" :key="`content-loader-grid-item-${n}}`" class="content-loader-grid__item">
+            <div v-for="n in 8" :key="`content-loader-grid-item-${n}}`" class="content-loader-grid__item grid-item">
                 <div class="grid-item__image"></div>
                 <div class="grid-item__content">
                     <div class="grid-item__icon"></div>
