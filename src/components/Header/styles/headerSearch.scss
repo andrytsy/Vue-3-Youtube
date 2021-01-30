@@ -1,0 +1,33 @@
+@import "src/scss/variables/colors";
+
+.header-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__input {
+        width: 400px;
+        height: 30px;
+        border: 1px solid $palette-primary-border;
+    }
+
+    &__bnt {
+        background-color: $palette-fourth-background;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content-item {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
+}

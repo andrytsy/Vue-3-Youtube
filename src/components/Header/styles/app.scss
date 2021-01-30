@@ -8,4 +8,9 @@ $headerHeight: 56px;
     background-color: $palette-secondary-background;
     display: flex;
     justify-content: flex-start;
+
+    &__search {
+        display: flex;
+        flex-grow: 1;
+    }
 }

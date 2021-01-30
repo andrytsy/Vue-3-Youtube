@@ -8,7 +8,7 @@
                 </div>
             </template>
             <template name="content">
-                <ul>
+                <ul class="header-search__content">
                     <li v-for="option in quickOptions" :key="option.title">{{ option.title }}</li>
                 </ul>
             </template>
