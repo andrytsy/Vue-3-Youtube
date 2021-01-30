@@ -5,9 +5,14 @@
         </div>
         <div class="content-loader-grid">
             <div v-for="n in 8" :key="`content-loader-grid-item-${n}}`" class="content-loader-grid__item">
-                <div class="content-loader-grid__item-picture"></div>
-                <div class="content-loader-grid__item-title"></div>
-                <div class="content-loader-grid__item-description"></div>
+                <div class="grid-item__image"></div>
+                <div class="grid-item__content">
+                    <div class="grid-item__icon"></div>
+                    <div class="grid-item__info">
+                        <div class="grid-item__info-title"></div>
+                        <div class="grid-item__info-description"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
