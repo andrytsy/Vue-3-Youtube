@@ -1,4 +1,7 @@
 .dropdown {
+    display: flex;
+    flex-direction: column;
+
     &__trigger {}
     &__content {}
 }

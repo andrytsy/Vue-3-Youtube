@@ -6,19 +6,25 @@
     justify-content: center;
     align-items: center;
 
-
     &__content {
+        position: absolute;
+        width: 500px;
         display: flex;
         flex-direction: column;
+        z-index: 10;
+        background-color: $palette-base-color;
+        border: 1px solid $palette-primary-background;
+        font-size: 14px;
+        font-weight: bold;
+        color: $palette-secondary-text;
     }
 
     &__content-item {
         width: 100%;
-        font-size: 14px;
         padding: 10px;
 
         &:hover {
-            font-weight: bold;
+            background-color: $palette-secondary-text;
         }
     }
 }

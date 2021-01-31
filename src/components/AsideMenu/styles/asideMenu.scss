@@ -5,7 +5,7 @@
     width: 74px;
     transition: 0.2s;
     background-color: $palette-secondary-background;
-    overflow: scroll;
+    overflow: auto;
 
     &--open {
         width: 240px;
