@@ -22,9 +22,10 @@
     &__content-item {
         width: 100%;
         padding: 10px;
+        cursor: pointer;
 
         &:hover {
-            background-color: $palette-secondary-text;
+            background-color: $palette-third-background;
         }
     }
 }
