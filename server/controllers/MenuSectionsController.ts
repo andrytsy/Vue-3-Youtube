@@ -28,11 +28,12 @@ export default class MenuSectionsController {
 				id: 'best',
 				title: 'Best of YouTube',
 				items: [
-					{id: 'best-1', title: 'Music', path: '/music', icon: 'y-music'},
-					{id: 'best-2', title: 'Gaming', path: '/gaming', icon: 'gaming'},
-					{id: 'best-3', title: 'News', path: '/news', icon: 'news'},
-					{id: 'best-4', title: 'Live', path: '/live', icon: 'live'},
-					{id: 'best-5', title: '360 Video', path: '/vr', icon: 'vr'}
+					{id: 'best-1', title: 'Music', path: '/music', icon: 'best-y-music'},
+					{id: 'best-2', title: 'Sport', path: '/sport', icon: 'best-sport'},
+					{id: 'best-3', title: 'Gaming', path: '/gaming', icon: 'best-gaming'},
+					{id: 'best-4', title: 'News', path: '/news', icon: 'best-news'},
+					{id: 'best-5', title: 'Live', path: '/live', icon: 'best-live'},
+					{id: 'best-6', title: '360 Video', path: '/vr', icon: 'best-vr'}
 				]
 			},
 			{
@@ -45,8 +46,9 @@ export default class MenuSectionsController {
 				title: 'More From YouTube',
 				items: [
 					{id: 'more-1', title: 'YouTube Premium', path: '/premium', icon: 'premium'},
-					{id: 'more-2', title: 'Gaming', path: '/gaming', icon: 'gaming'},
-					{id: 'more-3', title: 'Live', path: '/live', icon: 'live'}
+					{id: 'more-2', title: 'Sport', path: '/sport', icon: 'sport'},
+					{id: 'more-3', title: 'Gaming', path: '/gaming', icon: 'gaming'},
+					{id: 'more-4', title: 'Live', path: '/live', icon: 'live'}
 				]
 			},
 			{
