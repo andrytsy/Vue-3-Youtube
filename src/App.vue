@@ -5,7 +5,7 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
     // todo: доделать определение и установку ширины экрана клиента
-    // import ClientSize from '@/helpers/ClientSize'
+    import ClientSize from '@/helpers/ClientSize'
     export default defineComponent({
         name: 'RootApp',
         beforeMount () {

@@ -1,10 +1,11 @@
-export namespace ClientSize {
-	export interface ScreenSizes {
+export namespace ClientScreen {
+	export interface Sizes {
 		size: number
 		setScreenSize(size: number): void
 		getScreenSize(): number
 	}
-	export class Screen implements ScreenSizes {
+
+	export class Size implements Sizes {
 		size: number
 
 		constructor(size: number) {
