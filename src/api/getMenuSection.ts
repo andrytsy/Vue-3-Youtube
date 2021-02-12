@@ -1,6 +1,6 @@
 import axios from 'axios'
-import AsideMenuSectionItem from '@/models/AsideMenu/AsideMenuSectionItem'
-import AsideMenuSection from '@/models/AsideMenu/AsideMenuSection'
+import AsideMenuSectionItem from '@/models/asideMenu/AsideMenuSectionItem'
+import AsideMenuSection from '@/models/asideMenu/AsideMenuSection'
 import AsideMenuSectionInterface from '@/interfaces/AsideMenuSection'
 import AsideMenuSectionItemInterface from '@/interfaces/AsideMenuSectionItem'
 

@@ -13,7 +13,7 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue'
-    import AsideMenuSectionItem from '@/models/AsideMenu/AsideMenuSectionItem.ts'
+    import AsideMenuSectionItem from '@/models/asideMenu/AsideMenuSectionItem.ts'
     import iconsSpriteSrc from '@/assets/icons/asideMenuSprite.svg'
     import { isMenuOpen } from '@/components/MainLogoBlock/composition'
 

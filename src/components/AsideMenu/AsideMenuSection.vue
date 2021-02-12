@@ -12,7 +12,7 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
     import AsideMenuSectionItem from '@/components/AsideMenu/AsideMenuSectionItem.vue'
-    import AsideMenuSection from '@/models/AsideMenu/AsideMenuSection.ts'
+    import AsideMenuSection from '@/models/asideMenu/AsideMenuSection.ts'
     import { isMenuOpen } from '@/components/MainLogoBlock/composition'
 
     export default defineComponent({
