@@ -7,11 +7,13 @@ import {
 	provide,
 	inject,
 } from 'vue'
+import platform from 'platform'
 import {Client} from '@/models/global/Client'
+import IUserAgent from '@/models/global/userAgent/UserAgent.interface'
 
 export const state = reactive({
-	screenSize: null,
-	userAgent: null,
+	screenSize: '',
+	userAgent: new Client.UserAgent(),
 })
 
 export const getters = {
@@ -21,15 +23,16 @@ export const getters = {
 export const actions = {
 	initClientSettings() {
 		const screen = new Client.Screen(window.screen.width)
-		const userAgent = new Client.UserAgent(navigator.userAgent)
+		const userAgent = new Client.UserAgent(platform.parse(navigator.userAgent))
 
 		mutations.setScreenSize(screen.getSize())
+		mutations.setUserAgent(userAgent)
 	},
 }
 
 export const mutations = {
-	// @ts-ignore
 	setScreenSize: (screenSize: string) => state.screenSize = screenSize,
+	setUserAgent: (userAgent: IUserAgent) => state.userAgent = userAgent,
 }
 
 
