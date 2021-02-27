@@ -1,13 +1,20 @@
 <template>
-    <router-view/>
+    <GlobalProvider>
+        <router-view/>
+    </GlobalProvider>
 </template>
 
 <script lang="ts">
     import { defineComponent } from 'vue'
-    // todo: доделать определение и установку ширины экрана клиента
+    import { useProvidedGlobalStore } from '@/composable/useGlobalStore'
+
     export default defineComponent({
         name: 'RootApp',
-        beforeMount () {
+        components: {
+            GlobalProvider
+        },
+        setup () {
+            const globalStore = useProvidedGlobalStore()
         }
     })
 

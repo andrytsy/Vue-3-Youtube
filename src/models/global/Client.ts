@@ -5,4 +5,3 @@ export namespace Client {
 	export const Screen = ScreenClass
 	export const UserAgent = UserAgentClass
 }
-

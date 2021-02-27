@@ -19,6 +19,7 @@ module.exports = {
 		    switchCase: 1
 	    }],
 	    '@typescript-eslint/no-var-requires': 0,
+	    '@typescript-eslint/no-namespace': 0,
 	    'no-mixed-spaces-and-tabs': 0,
 	    'no-tabs': 0
     },
